@@ -1,0 +1,28 @@
+= Notes for EXAMPLE MACHINE
+9/23/18
+
+== Enumeration 
+
+Scanned with nmap
+
+ $ nmap 10.10.10.95 -A 
+
+Scanned as root
+
+ # nmap 10.10.10.95 -A
+
+[source, hostinfo]
+----
+Name: Hostname
+OS: Windows 7 SP 1
+IP: 10.10.10.95
+----
+
+RESEARCH: Lines that begin with 'RESEARCH:' are stored in the RESEARCH file
+
+TECHNIQUE: Lines that begin with 'TECHNIQUE:' are stored in the TECHNIQUE file
+
+Run other programs, the parse_it.sh script will save the commands run to a COMMANDS file
+
+ $ nikto -host 10.10.10.95 -p 8080
+

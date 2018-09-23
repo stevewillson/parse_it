@@ -1,0 +1,33 @@
+= parse_it
+
+parse_it is a bash script that will take opnote input in a pre-defined format and slice the file into different categories
+
+The motivation behind this is to take notes during HackTheBox or Pen Testing with Kali as flat text files and then process the entire text file to provide meaningful files for later review.
+
+Patterns that parse_it currently separates to different files:
+
+.Lines beginning with:
+* RESEARCH:
+* TECHNIQUE:
+* ` $` or ` #` (note: there must be a space before the `$` or `#`)
+
+.Lines that contain
+* `source, hostinfo` - parse_it will go through the note file line by line and output the information to a HOSTINFO file until two occurances of `----` are seen
+
+== Example Notes File
+
+See the EXAMPLE_NOTES.adoc file for more information.
+
+== Producing HTML output with asciidoctor
+
+parse_it will attempt to use asciidoctor to produce an .html file from the .adoc notes file. 
+
+asciidoctor can be installed using a package manager
+
+For example: 
+
+ $ sudo apt-get install asciidoctor
+
+
+
+
